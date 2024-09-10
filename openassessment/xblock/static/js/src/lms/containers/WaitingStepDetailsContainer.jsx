@@ -75,6 +75,8 @@ const WaitingStepDetailsContainer = ({
 
     // Fetch waiting step data from API
     updateData();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

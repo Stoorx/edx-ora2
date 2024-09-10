@@ -12,13 +12,7 @@ const WaitingStepContent = ({
   const oraDescriptionText = gettext(
     'The "{name}" problem is configured to require a minimum of {min_grades} '
     + 'peer grades, and asks to review {min_graded} peers.',
-  ).replace(
-    '{name}', waitingStepDetails.display_name,
-  ).replace(
-    '{min_grades}', waitingStepDetails.must_be_graded_by,
-  ).replace(
-    '{min_graded}', waitingStepDetails.must_grade,
-  );
+  ).replace('{name}', waitingStepDetails.display_name).replace('{min_grades}', waitingStepDetails.must_be_graded_by).replace('{min_graded}', waitingStepDetails.must_grade);
 
   const stuckLearnersText = gettext(
     'There are currently {stuck_learners} learners in the waiting state, '
@@ -66,6 +60,7 @@ WaitingStepContent.propTypes = {
     must_grade: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     waiting_count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     overwritten_count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    // eslint-disable-next-line react/forbid-prop-types
     student_data: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
   refreshData: PropTypes.func,

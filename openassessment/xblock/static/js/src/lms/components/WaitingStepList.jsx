@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components, react/forbid-prop-types */
 import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
